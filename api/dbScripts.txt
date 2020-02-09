@@ -1,0 +1,42 @@
+CREATE TABLE `items` (
+  `id` smallint DEFAULT NULL,
+  `title` varchar(200) DEFAULT NULL,
+  `text` text
+)
+
+DELIMITER $$
+CREATE PROCEDURE `items_getDetails`(
+	IN id SMALLINT
+)
+BEGIN	
+    
+	SELECT 
+		items.id,
+        items.title,
+        items.text
+    FROM items    
+    where items.id=id;
+    
+END$$
+DELIMITER ;
+
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `items_getList`(
+	IN pageSize INT,
+    IN page INT
+)
+BEGIN	
+    DECLARE startIndex INT DEFAULT (pageSize * (page - 1));      
+      
+	SELECT 
+		items.id,
+        items.title,
+        substring(items.text,1,300) as text
+    FROM items    
+    limit startIndex, pageSize;
+    
+    select count(1) as itemCount from items;
+    
+END$$
+DELIMITER ;

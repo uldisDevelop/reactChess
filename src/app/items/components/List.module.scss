@@ -1,0 +1,36 @@
+.container {
+  padding-top: 5px;
+}
+
+.pageingLink{
+  padding:10px;
+  cursor: pointer;  
+  user-select: none; 
+  &:hover{
+    text-decoration: underline;
+  }
+
+  &.linkInactive{
+    cursor: default;
+    opacity:0.5;    
+    text-decoration: none;
+  }
+}
+
+.list{
+  position: absolute;
+  left:0px;
+  right:0px;
+  top:0px;
+  bottom:30px;
+  overflow: auto;
+}
+
+.pagination{
+  position: absolute;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  height:30px;
+  text-align:center;
+}

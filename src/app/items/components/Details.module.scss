@@ -1,0 +1,19 @@
+.detailsText{   
+  padding-left:10px;  
+  
+  h1{
+    line-height: 27px;       
+    color:#5d6a86;
+  }  
+}
+
+.backBtn{
+  padding:10px;
+  display: inline-block;
+  cursor: pointer;
+  
+  &:hover{
+    text-decoration: underline;
+  }
+}
+

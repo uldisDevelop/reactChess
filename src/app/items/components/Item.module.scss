@@ -1,0 +1,33 @@
+.list {
+  padding-top: 5px;
+}
+
+.item {
+  margin: 11px;
+  cursor: pointer;
+  background-color: #fbfbfb;
+  &:hover {
+    background-color: #f9f9f9;
+    box-shadow: -1px -1px 9px #c1c1c1;
+  }
+}
+
+.title {
+  padding: 10px 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #5d6a86;
+  font-weight: bold;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+}
+
+.summary {
+  padding: 2px 8px;
+  color: #848484;
+  height: 43px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 1px solid #e2e2e2;
+}

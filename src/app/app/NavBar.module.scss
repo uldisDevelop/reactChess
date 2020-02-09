@@ -1,0 +1,50 @@
+.navContainer {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 60px;
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #e2e2e2;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px #e8e8e8;
+  z-index: 1;
+}
+
+.nav {
+  position: absolute;
+  left: 50%;
+  width: 1200px;
+  max-width: calc(100% - 10px);
+  top: 0px;
+  bottom: 2px;
+  transform: translateX(-50%);
+  text-align: right;
+
+  a {
+    color: #5d6a86 !important;
+    display: inline-block;
+    height: 59px;
+    padding: 17px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #ececec;
+    }
+
+    &.selected{
+      text-decoration: underline;
+    }
+  }
+}
+
+.title {  
+  margin-left: 20px;
+  margin-right: 100px;
+  font-size: 22px;
+  float: left;
+  margin: 12px;
+  text-shadow: 5px 4px 6px #a0a0a0;
+}
